@@ -94,7 +94,8 @@ class SSZ9700CameraController:
         Request the current zoom position of the camera.
         """
         # Construct the payload for zoom position
-        payload = b'\x43\x00\x00\x00\x00\x00'
+        # payload = b'\x43\x00\x00\x00\x00\x00'
+        payload = b'\x43\x30\x30\x30\x30\x30'  # Include valid command
 
         # Send the command
         response = self.send_command(destination_id, payload)
